@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ελληνικό Εστιατόριο">
+    <meta name="keywords" content="Εστιατόριο, Μενου, Ελληνική Κουζίνα, Σεφ, Κράτηση, Θεσσαλονική,">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Ελλήνων Γεύσεις</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="logo-menu">
+        <header>
+            <a href="index.html">
+                <img src="img/Logo.jpg" alt="Λογότυπο">
+            </a>
+        </header>
+
+
+        <nav>
+            <a href="index.html">ΑΡΧΙΚΗ</a>
+            <a href="menu.html">MENU</a>
+            <a href="reservation.html">ΚΡΑΤΗΣΗ</a>
+            <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ</a>
+            <a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        </nav>
+    </div>
+    <div class="reservation-section">
+        <div class="reservation-page-image-background">
+            <img src="img/Restaurant.jpg" width="100%" height="400px" class="background-image" alt="Εικόνα Φόντου">
+        </div>
+        <div class="image-text-overlay">
+            <h1>ΚΡΑΤΗΣΗ</h1>
+        </div>
+    </div>
+
+    <section>
+        <div class="reservation-page-container">
+            <div class="reservation-page-text">
+                <h2>Κάντε Κράτηση</h2>
+                <h1>Ιδιωτικό Δείπνο & Εκδηλώσεις</h1>
+                <p> Είμαστε ένα εστιατόριο που σας προσφέρει μια μοναδική γαστρονομική εμπειρία.<br> Είτε πρόκειται
+                    για μια οικογενειακή συγκέντρωση, ένα ρομαντικό δείπνο, ή ένα <br>επαγγελματικό γεύμα,
+                    είμαστε εδώ για να σας εξυπηρετήσουμε με την καλύτερη <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;δυνατή φιλοξενία και γεύση.</p>
+                <h1>Κράτηση μέσω τηλεφώνου:</h1>
+                <h4><i class="fas fa-phone"></i>123-4567890</h4>
+                <h4><i class="fas fa-phone"></i>697-1234567</h4>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="reservation-page-form-container">
+            <h2>Online Κράτηση</h2>
+            <h1>Καμία αναμονή για τραπέζι</h1>
+            <form action="form1.php" method="post" onsubmit="showAlert()">
+            <div class="reservation-form">
+                <div class="form-group1">
+                <label for="name"></label><br>
+                <input type="text" id="name" name="name" placeholder="Όνομα" required><br>
+            </div>
+            <div class="form-group1">
+                <label for="phone"></label><br>
+                <input type="text" id="phone" name="phone" placeholder="Τηλέφωνο" required><br>
+            </div>
+            <div class="form-group1">
+                <label for="email"></label><br>
+                <input type="email" id="email" name="email"  placeholder="Email"><br>
+            </div>
+            <div class="form-group2">
+                <label for="date"></label><br>
+                <input type="date" id="date" name="date" required><br>
+            </div>
+            <div class="form-group2">
+                <label for="num_people"></label><br>
+                <input type="number" id="num_people" name="num_people" min="1" placeholder="Αριθμός Ατόμων" required><br>
+            </div>
+            <div class="form-group2">
+                <label for="time"></label><br>
+                <input type="text" id="time" name="time" placeholder="2:00 μ.μ" required><br>
+            </div>
+                <input type="submit" value="Κράτηση">
+            </form>
+        </div>
+        </div>
+    </section>
+    <script>
+        function showAlert() {
+          alert("Η φόρμα υποβλήθηκε επιτυχώς!");
+        }
+        </script>
+
+    <footer>
+        <div class="footer-container">
+           <div class="footer-logo-container">
+            <img src="img/Logo.jpg" width="200px" height="200px" alt="Logo image">
+           </div>
+           <div class="footer-location-container">
+            <h4>Ελλήνων Γεύσεις</h4>
+            <h5><i class="fas fa-location-dot"></i>Τούμπας 5, Κάτω Τούμπα</h5>
+            <h5 style="padding-left: 120px;">Θεσσαλονική 54623</h5>
+        </div>
+            <div class="footer-contact-container">
+            <h4>Επικοινωνία</h4>
+            <h5><i class="fas fa-phone"></i>123-4567890 </h5>
+            <h5><i class="fas fa-phone"></i>697-1234567</h5>
+            <h5><i class="fas fa-envelope"></i><a href="mailto:info@ellinongeuseis.gr">info@ellinongeuseis.gr</a></h5>
+            <div class="footer-social-container">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            </div>
+            <div class="footer-time-container">
+                <h4>Ώρες Λειτουργίας:</h4>
+                <h5>Καθημερίνα: 11:30-11:45 μ.μ.</h5>
+                <h4>Ώρες Λειτουργίας Κουζίνας:</h4>
+                <h5>Καθημερινά: 2:00-10:00 μ.μ.</h5>
+            </div>
+           </div>
+        
+    </footer>
+
+    <button id="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <script src="javascript/main.js"></script>
+
+</body>
+
+</html>

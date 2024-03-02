@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="el">
+    <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ελληνικό Εστιατόριο">
+    <meta name="keywords" content="Εστιατόριο, Μενου, Ελληνική Κουζίνα, Σεφ, Κράτηση, Θεσσαλονική,">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Ελλήνων Γεύσεις</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    </head>
+    <body style="background-color: rgb(30, 27, 27);">
+ 
+    <div class="logo-menu">
+        <header>
+            <a href="index.html">
+            <img src="img/Logo.jpg" alt="Λογότυπο">
+        </a>
+        </header>
+
+        <nav>
+            <a href="index.html">ΑΡΧΙΚΗ</a>
+            <a href="menu.html">MENU</a>
+            <a href="reservation.html">ΚΡΑΤΗΣΗ</a>
+            <a href="about.html">ΣΧΕΤΙΚΑ ΜΕ</a>
+            <a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        </nav>
+    </div>
+ 
+    <section>
+    <div class="contact-page-heading">
+        <h1>Επικοινωνήστε μαζί μας</h1>
+        <h4>Είστε λάτρης του φαγητού; Εάν η απάντηση είναι ναι, τότε αυτό το εστιατόριο είναι για εσάς.</h4>
+    </div>
+    <div class="form-contact-container">
+    <form action="form2.php" method="post" onsubmit="showAlert()">
+    <div class="form-contact">
+        <label for="fullname"></label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Ονοματεπώνυμο" required><br>
+        <label for="email"></label><br>
+        <input type="text" id="email" name="email" placeholder="Email" required><br>
+        <label for="phone"></label><br>
+        <input type="text" id="phone" name="phone" placeholder="Τηλέφωνο"><br>
+       <label for="message"></label><br>
+       <input type="text" id="message" name="message" placeholder="Μήνυμα"><br>
+       <input type="submit" value="Υποβολή">     
+    </form>
+    </div>
+
+    <script>
+        function showAlert() {
+          alert("Η φόρμα υποβλήθηκε επιτυχώς!");
+        }
+        </script>
+        
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12115.406698132778!2d22.95543365575219!3d40.61109608212717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a838e8018670c7%3A0x227c0d72c739a222!2zzprOrM-Ez4kgzqTOv8-NzrzPgM6xLCDOmM61z4PPg86xzrvOv869zq_Ous63IDU0NCA1Mw!5e0!3m2!1sel!2sgr!4v1707496159443!5m2!1sel!2sgr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div class="contact-details-heading">
+    <h1>Στοιχεία Επικοινωνίας</h1>
+</div>
+<div class="contact-details">
+    <div class="contact-details-icons">
+    <h1><i class="fas fa-location-dot"></i></h1>
+    <h2>Τούμπας 5, Κάτω Τούμπα, <br> Θεσσαλονική 54623</h2>
+</div>
+    <div class="contact-details-icons">
+    <h1><i class="fas fa-phone"></i></h1>
+    <h2>123-4567890</h2>
+    <h2> 697-1234567</h2>
+</div>
+<div class="contact-details-icons">
+    <h1><i class="fas fa-envelope"></i></h1>
+    <h2>
+        <a href="mailto:info@yourlogo.gr">info@ellinongeuseis.gr</a>
+    </h2>
+</div>
+</div>
+
+</section>
+
+
+<footer>
+    <div class="footer-container">
+       <div class="footer-logo-container">
+        <img src="img/Logo.jpg" width="200px" height="200px" alt="Logo image">
+       </div>
+       <div class="footer-location-container">
+        <h4>Ελλήνων Γεύσεις</h4>
+        <h5><i class="fas fa-location-dot"></i>Τούμπας 5, Κάτω Τούμπα</h5>
+        <h5 style="padding-left: 120px;">Θεσσαλονική 54623</h5>
+    </div>
+        <div class="footer-contact-container">
+        <h4>Επικοινωνία</h4>
+        <h5><i class="fas fa-phone"></i>123-4567890 </h5>
+        <h5><i class="fas fa-phone"></i>697-1234567</h5>
+        <h5><i class="fas fa-envelope"></i><a href="mailto:info@ellinongeuseis.gr">info@ellinongeuseis.gr</a></h5>
+        <div class="footer-social-container">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+        <div class="footer-time-container">
+            <h4>Ώρες Λειτουργίας:</h4>
+            <h5>Καθημερίνα: 11:30-11:45 μ.μ.</h5>
+            <h4>Ώρες Λειτουργίας Κουζίνας:</h4>
+            <h5>Καθημερινά: 2:00-10:00 μ.μ.</h5>
+        </div>
+       </div>
+    
+</footer>
+
+<button id="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script src="javascript/main.js"></script>
+
+</body>
+</html>

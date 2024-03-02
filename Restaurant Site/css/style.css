@@ -1,0 +1,1555 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0); /* Φόντο με διαφάνεια */
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+ 
+header img {
+    width: 100px;
+    height: 100px;
+    margin-left: 70px;
+    margin-right: 40px;
+}
+  
+nav {
+    display: flex;
+    
+}
+  
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+nav a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.cookie-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 9999;
+    visibility: hidden;     
+}
+  
+.cookies-buttons {
+    display: flex;
+    margin-top: 10px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    visibility: hidden;
+    
+}
+
+.cookies-buttons button:hover {
+    background-color: rgb(1, 140, 135);
+    color: white;
+}
+
+.cookie-modal h3 {
+    font-size: 20px;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 50px;    
+    padding-bottom: 20px; 
+}
+  
+.cookie-modal p {
+    color: rgb(0, 0, 0);
+    padding-left: 50px;     
+}
+
+.cookie-modal h3,p {
+    margin: 0;
+}
+  
+.cookie-modal button {
+    background-color: #ffffff;
+    color: rgb(1, 140, 135);
+    padding: 10px 100px;
+    border-color: rgb(1, 140, 135);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 40px;
+}
+  
+.cookie-modal button.reject {
+    background-color: #ffffff;
+    color: rgb(1, 140, 135);
+}
+
+#dynamic-section {
+    opacity: 0;
+    transform: translateX(-20px); /* Μετακίνηση προς τα αριστερά */
+    animation: fadeInLeft 2s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px); /* Αρχική θέση: προς τα αριστερά */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Τελική θέση: κανένας μετακίνηση */
+    }
+}
+
+.section-container {
+    opacity: 0; /* Αρχικά κρύβω τα section και τον slider-wrapper */
+    transition: opacity 0.5s ease; /* Προσθέτω μια μετάβαση στο opacity */
+}
+
+.home-section {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ρυθμίστε το ύψος όπως επιθυμείτε */
+    overflow: hidden;
+}
+  
+.background-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Διαφάνεια 50% με μαύρο χρώμα */
+}
+
+.home-header img.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-position: center top;
+}
+ 
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 0 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.image-overlay h1 {
+    font-size: 3em; /* Ρυθμίστε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
+}
+  
+.image-overlay h2 {
+    font-size: 1.5em; /* Ρυθμίστε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
+}
+  
+  
+.image-overlay h1,
+.image-overlay h2 {
+    margin: 0px;
+    color: white !important;
+}
+    
+.reservation-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+.reservation-button:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+}
+
+.reserve-container h2, h3{
+    padding-left: 150px;
+    font-family: san-serif;
+
+}
+
+.homepage-heading-container {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.homepage-heading-container h3 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding-left: 60px;
+    padding-right: 50px;
+    color: rgb(247, 6, 6);
+
+}
+
+.homepage-heading-container h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: rgb(247, 6, 6);
+}
+
+.homepage-heading-container h2,h3 {
+    margin: 20px;
+}
+
+.homepage-food-photo-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.homepage-food-photo-text-container h4 {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(247, 6, 6);
+    margin-top: 0;
+    padding-left: 60px;
+}
+
+.homepage-food-photo-text-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(49, 49, 49);
+    line-height: 35px;
+}
+
+.homepage-drinks-container {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.homepage-drinks-container img {
+    padding-left: 100px;
+    padding-top: 150px;
+}
+
+.homepage-drinks-heading-container h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: rgb(247, 6, 6);
+    padding-left: 150px;
+}
+
+.homepage-drinks-heading-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: rgb(49, 49, 49);
+    line-height: 30px;
+    padding-left: 30px;
+}
+
+.menu-container {
+    display: flex;
+}
+
+.menu-text-container {
+    padding-top: 30px;
+}
+
+.menu-text-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    color: #ff0000;  
+    text-align: center;
+}
+
+.menu-text-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #3e4045;
+    text-align: center;
+}
+
+.menu-text-container h1,h2 {
+    margin: 0;
+}
+
+.menu-text-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #47484c;
+    text-align: center;
+    line-height: 25px;
+}
+
+.pre-dishes-container {
+    padding-right: 120px;
+}
+
+.pre-dishes-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.pre-dishes-container h2 {
+    font-size: 20px;
+    font-family: 'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif;
+}
+
+.pre-dishes-container p {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3e4045;
+}
+
+.primary-dishes-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.primary-dishes-container h2 {
+    font-size: 20px;
+    font-family: 'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif;
+}
+
+.primary-dishes-container p {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3e4045;
+}
+
+.marine-dishes-container {
+    padding-left: 100px;
+}
+
+.marine-dishes-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.marine-dishes-container h2 {
+    font-size: 20px;
+    font-family: 'Cambria, Cochin', Georgia, Times, 'Times New Roman', serif;
+}
+
+.marine-dishes-container p {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3e4045;
+}
+
+.pre-dishes-container,
+.primary-dishes-container,
+.marine-dishes-container {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button {
+    text-align: center;
+}
+
+.redirect-button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.menu-section {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ρυθμίστε το ύψος όπως επιθυμείτε */
+    overflow: hidden;
+}
+  
+.image-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Διαφάνεια 50% με μαύρο χρώμα */
+}
+
+
+.image-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 0 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.image-text-overlay h1 {
+    font-size: 3em; /* Ρυθμίστε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
+}
+  
+.image--text-overlay h2 {
+    font-size: 1.5em; /* Ρυθμίστε το μέγεθος της γραμματοσειράς όπως επιθυμείτε */
+}
+  
+  
+.image-text-overlay h1,
+.image-text-overlay h2 {
+    margin: 0px;
+    color: white !important;
+}
+
+.menu-page-container {
+    display: flex;
+}
+
+.menu-pre-dishes-container {
+    padding-left: 200px;
+    padding-top: 50px;
+}
+
+.menu-pre-dishes-container h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 45px;
+    padding-top: 50px;
+}
+
+.menu-pre-dishes-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px; 
+    padding-bottom: 10px;
+}
+
+.menu-pre-dishes-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045; 
+    padding-left: 5px;  
+    padding-bottom: 10px; 
+}
+
+.menu-pre-dishes-container ul {
+    list-style: none;
+}
+
+.menu-page-images-container {
+    display: flex;
+    flex-direction: column; /* Αλλάζει τον τρόπο διάταξης σε κάθετο */
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+.menu-page-image1 img {
+    width: 600px;
+    height: 450px;   
+}
+
+.menu-page-image2 img {
+    width: 600px;
+    height: 450px;
+}
+
+.menu-page-image1,
+.menu-page-image2 {
+    margin-top: 60px; /* Προσθέτει κενό ανάμεσα στις εικόνες */
+}
+
+.menu-page-dishes {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 150px;
+}
+
+.menu-primary-dishes-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    text-align: left;
+    padding-left: 45px;
+    padding-top: 50px;
+}
+
+.menu-primary-dishes-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;    
+    padding-bottom: 10px;
+}
+
+.menu-primary-dishes-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 5px;   
+    padding-bottom: 10px; 
+}
+
+.menu-primary-dishes-container ul {
+    list-style: none;
+}
+
+.menu-marine-dishes {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-right: 150px;
+}
+
+.menu-marine-dishes-container {
+    padding-left: 200px;
+}
+
+.menu-marine-dishes-container h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 45px;
+    padding-top: 50px;
+}
+
+.menu-marine-dishes-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px; 
+    padding-bottom: 10px;   
+}
+
+.menu-marine-dishes-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045; 
+    padding-left: 5px; 
+    padding-bottom: 10px;  
+}
+
+.menu-marine-dishes-container ul {
+    list-style: none;
+}
+
+.menu-salad-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 150px;
+    padding-top: 80px;
+}
+
+.menu-salad-container img {
+    padding-top: 30px;
+}
+
+.menu-salad h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 195px;
+    padding-top: 50px;
+}
+
+.menu-salad h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;  
+    padding-left: 150px;  
+    padding-bottom: 10px;
+}
+
+.menu-salad p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;  
+    padding-left: 155px; 
+    padding-bottom: 10px; 
+}
+
+.menu-salad ul {
+    list-style: none;
+}
+
+.menu-desert-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 200px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.menu-desert h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 195px;
+    padding-top: 50px;
+}
+
+.menu-desert h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;  
+    padding-left: 150px;  
+    padding-bottom: 10px;
+}
+
+.menu-desert p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;  
+    padding-left: 155px;  
+    padding-bottom: 10px
+}
+
+.menu-desert ul {
+    list-style: none;
+}
+.desert-image img {
+    width: 400px;
+    height: 500px;
+    padding-top: 130px;
+    padding-left: 250px;
+}
+
+.white-wines-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.white-wines-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #383030;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.white-dry-wines {
+    padding-left: 350px;
+}
+
+.white-dry-wines h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #383030;
+    padding-left: 5px;
+}
+
+.white-dry-wines h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.white-dry-wines p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.white-dry-wines ul {
+    list-style: none;
+}
+
+.white-sweet-wines {
+    padding-right: 350px;
+}
+
+.white-sweet-wines h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #383030;
+    padding-left: 5px;
+    padding-right: 100px;
+}
+
+.white-sweet-wines h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.white-sweet-wines p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.white-sweet-wines ul {
+    list-style: none;
+}
+
+.red-wines-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.red-wines-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #383030;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.red-dry-wines {
+    padding-left: 350px;
+}
+
+.red-dry-wines h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #383030;
+    padding-left: 5px;
+}
+
+.red-dry-wines h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.red-dry-wines p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.red-dry-wines ul {
+    list-style: none;
+}
+
+.red-sweet-wines {
+    padding-right: 350px;
+}
+
+.red-sweet-wines h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #383030;
+    padding-right: 100px;
+    padding-left: 5px;
+}
+
+.red-sweet-wines h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.red-sweet-wines p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.red-sweet-wines ul {
+    list-style: none;
+}
+
+.red-sweet-wines {
+    padding-right: 350px;
+}
+
+.rose-wines-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rose-wines-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #383030;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.rose-dry-wines {
+    padding-left: 350px;
+}
+
+.rose-dry-wines h1 {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #383030;
+    padding-left: 5px;
+}
+
+.rose-dry-wines h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px; 
+}
+
+.rose-dry-wines p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.rose-dry-wines ul {
+    list-style: none;
+}
+
+.red-sweet-wines {
+    padding-right: 350px;
+}
+
+.rose-sweet-wines h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #383030;
+    padding-right: 100px;
+    padding-left: 5px;
+}
+
+.rose-sweet-wines h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.rose-sweet-wines p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.rose-sweet-wines ul {
+    list-style: none;
+}
+
+.rose-sweet-wines {
+    padding-right: 400px;
+}
+
+.menu-page-coctails {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.menu-coctails-fisrt-container {
+    padding-left: 350px;
+    padding-top: 50px;
+}
+
+.menu-page-coctails-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #313131;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.menu-coctails-fisrt-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.menu-coctails-fisrt-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.menu-coctails-fisrt-container ul {
+    list-style: none;
+}
+
+.menu-coctails-second-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #313131;
+    padding-bottom: 10px;
+}
+
+.menu-coctails-second-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: #3e4045;
+    padding-left: 7px;
+    padding-bottom: 10px;
+}
+
+.menu-coctails-second-container ul {
+    list-style: none;
+}
+
+.menu-coctails-second-container {
+    padding-right: 300px;
+    padding-top: 50px; 
+}
+
+.reservation-section {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+  
+.reservation-page-image-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.reservation-page-image-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Διαφάνεια 50% με μαύρο χρώμα */
+}
+
+.reservation-page-text {
+    padding-top: 80px;
+    padding-left: 400px;
+}
+
+.reservation-page-text h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px; 
+    padding-left: 140px;  
+}
+
+.reservation-page-text h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #ff0000; 
+    padding-left: 260px;
+}
+
+.reservation-page-text h1,h2 {
+    margin: 5px;
+}
+
+.reservation-page-text h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #ff0000; 
+    padding-left: 280px;
+}
+
+.reservation-page-text p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: #383030;   
+}
+
+.reservation-page-text i {
+    margin-right: 10px;
+    color: rgb(200, 0, 0);
+}
+
+.reservation-page-form-container {
+    padding-top: 100px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-page-form-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;  
+    text-align: center;
+}
+
+.reservation-page-form-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #ff0000; 
+    text-align: center;
+}
+
+.reservation-page-form-container h1,h2 {
+    margin: 5px;
+}
+
+.reservation-form {
+     width: 800px;
+     margin: 20px;
+     padding: 20px;
+     text-align: center;
+     border: none;
+     padding-left: 340px;
+}
+
+.reservation-form input {
+    width: 500px;
+    height: 60px;
+    border-top: none; /* Αφαιρεί το πλαίσιο από την επάνω πλευρά */
+    border-right: none; /* Αφαιρεί το πλαίσιο από τη δεξιά πλευρά */
+    border-left: none; /* Αφαιρεί το πλαίσιο από την αριστερή πλευρά */
+    border-bottom: 1px solid black; /* Διατηρεί το πλαίσιο μόνο στο κάτω μέρος */
+}
+
+.reservation-form input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    background-color: #ff0000;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;    
+}
+
+.reservation-form input[type="submit"]:hover {
+    background-color: white;
+    color:#ff0000 ;
+}
+
+.reservation-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Τρεις στήλες */
+    grid-gap: 10px; /* Κενό ανάμεσα στα πεδία */
+}
+
+.form-group1 input,
+.form-group2 input {
+    width: calc(100% - 10px); /* Το πλάτος του input χωρίς το κενό */
+}
+
+.form-group1,
+.form-group2 {
+    margin-bottom: 10px; /* Κενό ανάμεσα στα πεδία και την επόμενη ετικέτα */
+}
+
+.form-group1 label,
+.form-group2 label {
+    grid-column: 1 / 2; /* Ετικέτα στην πρώτη στήλη */
+}
+
+.form-group1,
+.form-group2 {
+    display: grid;
+    grid-template-columns: 1fr; /* Μια στήλη μέσα στα groups */
+}
+
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ρυθμίστε το ύψος όπως επιθυμείτε */
+    overflow: hidden;
+}
+  
+.about-background-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.about-background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Διαφάνεια 50% με μαύρο χρώμα */
+}
+
+.about-container {
+    padding-top: 60px;
+}
+
+.about-container  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.about-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #ff0000;
+    text-align: center;
+}
+
+.about-container h1,h2 {
+    margin: 5px;
+}
+
+.about-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.about-images-container img {
+    width: 500px;
+    height: 400px;
+}
+
+.about-images-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+.about-awards-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about-awards-images-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 300px;
+    padding-right: 600px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-services-container {
+    padding-top: 180px;
+}
+
+.about-services-container h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.about-services-container h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #ff0000;
+    text-align: center;
+}
+
+.about-services-container h1,h2 {
+    margin: 5px;
+}
+
+.about-services-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.about-wedding-container {
+    display: flex;
+    padding-left: 200px;
+    padding-top: 100px;
+}
+
+.about-wedding-text h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: rgb(253, 42, 42);
+    padding-left: 310px;
+    padding-top: 100px;
+}
+
+.about-wedding-text h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgb(114, 30, 30);
+    padding-left: 150px;
+    padding-bottom: 20px;
+}
+
+.about-wedding-text h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-left: 100px;
+    color: rgb(253, 42, 42);
+}
+
+.about-wedding-text h4 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-left: 90px;
+    color: rgb(253, 42, 42);
+}
+
+.about-wedding-text h3,h4 {
+    margin: 10px;
+}
+
+.about-wedding-text i {
+    margin-right: 10px;
+}
+
+.about-business-dinner-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 200px;
+}
+
+.about-business-dinner-container img {
+    padding-top: 100px;
+}
+
+.about-business-text {
+    padding-top: 50px;
+}
+
+.about-business-text h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: rgb(253, 42, 42);
+    padding-left: 250px;
+    padding-top: 150px;
+}
+
+.about-business-text h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgb(114, 30, 30);
+    padding-left: 130px;
+    padding-bottom: 20px;
+}
+
+.about-business-text h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-left: 100px;
+    color: rgb(253, 42, 42);
+}
+
+.about-business-text h4 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-left: 90px;
+    color: rgb(253, 42, 42);
+}
+
+.about-business-text h3,h4 {
+    margin: 10px;
+}
+
+.about-business-text i {
+    margin-right: 10px;
+}
+
+.about-birthday-container {
+    display: flex;
+    padding-left: 200px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+}
+
+
+.about-birthday-text h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: rgb(253, 42, 42);
+    padding-left: 310px;
+    padding-top: 100px;
+}
+
+.about-birthday-text h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgb(114, 30, 30);
+    padding-left: 150px;
+    padding-bottom: 20px;
+}
+
+.about-birthday-text h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    padding-left: 100px;
+    color: rgb(253, 42, 42);
+}
+
+.about-birthday-text h4 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-left: 90px;
+    color: rgb(253, 42, 42);
+}
+
+.about-birthday-text h3,h4 {
+    margin: 10px;
+}
+
+.about-birthday-text i {
+    margin-right: 10px;
+}
+
+.contact-page-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: #ffffff;
+    padding-left: 50px;
+    padding-top: 60px;
+}
+
+.contact-page-heading h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #ffffff;
+    padding-left: 40px;
+}
+
+.form-contact-container {
+    display: flex;
+}
+
+.form-contact {
+    padding-left: 50px;
+}
+
+.form-contact input {
+    width: 500px;
+    height: 50px;
+    background-color: rgb(30, 27, 27);
+    color: #ffffff;
+    border-top: none; /* Αφαιρεί το πλαίσιο από την επάνω πλευρά */
+    border-right: none; /* Αφαιρεί το πλαίσιο από τη δεξιά πλευρά */
+    border-left: none; /* Αφαιρεί το πλαίσιο από την αριστερή πλευρά */
+    border-bottom: 1px solid rgb(255, 255, 255); /* Διατηρεί το πλαίσιο μόνο στο κάτω μέρος */
+}
+
+.form-contact
+ input[type="submit"] {
+    width: 120px;
+    height: 50px;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid;
+    margin-top: 10px; 
+}
+
+.form-contact input[type="submit"]:hover {
+    background-color: white;
+    color:rgb(30, 27, 27) ;
+}
+
+iframe {
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+.contact-details{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 500px;
+    padding-bottom: 100px;
+}
+
+.contact-details-heading h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    color: #ffffff;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.contact-details-icons h1 {
+    padding-left: 50px;
+}
+
+.contact-details-icons h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #ffffff;
+    padding-left: 50px;
+}
+.contact-details i {
+    color: #000000;
+    border: 2px solid black; 
+    border-radius: 50%;
+    padding: 5px; 
+    background-color: white;  
+}
+
+.contact-details a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff
+}
+
+.custom-separator {
+    width: 80px; /* Προσαρμογή του μήκους της γραμμής */
+    height: 2px; /* Προσαρμογή του ύψους της γραμμής */
+    background-color: rgb(247, 6, 6); /* Χρώμα της γραμμής */
+    margin: 20px 200px; /* Κεντράρισμα και προσαρμογή των εξωτερικών περιθωρίων */
+}
+
+.separator {
+    width: 60px; /* Προσαρμογή του μήκους της γραμμής */
+    height: 2px; /* Προσαρμογή του ύψους της γραμμής */
+    background-color: rgb(247, 6, 6); /* Χρώμα της γραμμής */
+    margin: 40px 165px; /* Κεντράρισμα και προσαρμογή των εξωτερικών περιθωρίων */
+}
+
+.deco-separator {
+    width: 60px; /* Προσαρμογή του μήκους της γραμμής */
+    height: 2px; /* Προσαρμογή του ύψους της γραμμής */
+    background-color: rgb(247, 6, 6); /* Χρώμα της γραμμής */
+    margin: 40px 300px; /* Κεντράρισμα και προσαρμογή των εξωτερικών περιθωρίων */
+}
+
+.footer-container {
+    background-color: black;
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.footer-logo-container img {
+    padding-left: 100px;
+}
+
+.footer-location-container h4 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.footer-location-container h5 {
+    color: rgb(124, 124, 124);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding-left: 100px;
+}
+
+.footer-location-container i {
+    margin-right: 10px;
+}
+
+.footer-contact-container {
+    padding-left: 100px;
+}
+
+.footer-contact-container h4{ 
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-top: 40px;
+    
+}
+
+.footer-contact-container h5 {
+    color: rgb(124, 124, 124);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;   
+}
+
+.footer-contact-container i {
+    margin-right: 10px;
+}
+
+.footer-contact-container a {
+    color: orange;
+    text-decoration: none;
+}
+
+.footer-social-container i {
+    margin-left: 30px;
+}
+
+.footer-time-container h4 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 23px;
+    padding-left: 90px;
+    padding-top: 40px;
+}
+
+.footer-time-container h5 {
+    color: rgb(124, 124, 124);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding-left: 90px;
+}
+
+.footer-time-container h4,h5 {
+    margin: 10px;
+}
+
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* Αλλαγή του χρώματος φόντου σε διάφανο */
+    color: #333; /* Χρώμα κειμένου */
+    border: 1px solid black;
+    border-radius: 40%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 30px; /* Μέγεθος γραμματοσειράς */
+}
